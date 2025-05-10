@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+/* 全体 */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template:
+    "header"
+    "container" 1fr
+    "footer"
+  ;
+}
+
+h1 {
+  margin: 0;
+  font-weight: normal;
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  cursor: pointer;
+}
+
+img {
+  vertical-align: bottom;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  grid-area: container;
+}
+
+/* header */
+header {
+  background: skyblue;
+  padding: 20px;
+  grid-area: header;
+}
+
+header h1 {
+  text-align: center;
+}
+
+header a:hover {
+  opacity: .5;
+  transition-duration: .3s;
+}
+
+header .header-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+header .header-list ul {
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  transition-duration: 300ms;
+}
+
+header .header-lists {
+  position: relative;
+}
+
+header .header-lists h2 {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+header .header-lists ul {
+  position: absolute;
+  background: skyblue;
+  left: 0;
+  right: 0;
+  border-top: 1px solid black;
+}
+
+header .header-lists li {
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+header .header-lists a {
+  display: block;
+  padding: 10px;
+}
+
+header .header-lists li:hover {
+  opacity: .5;
+  transition-duration: .3s;
+}
+
+@media (min-width: 650px) {
+  header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .header-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 20px 0;
+  }
+}
+
+/* HTML */
+.container .html {
+  width: 70%;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.container .html h2 {
+  text-align: center;
+}
+
+.container .html p {
+  margin-top: 20px;
+}
+
+/* footer */
+footer {
+  grid-area: footer;
+  background: skyblue;
+  padding: 20px 0;
+}
+
+footer .footer-sns {
+  text-align: center;
+  margin: 40px auto 0;
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+}
+
+footer .footer-sns img {
+  display: block;
+}
+
+footer ul {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  margin: 40px 20px 0 0;
+  font-size: 12px;
+}
+
+footer li:hover {
+  opacity: .5;
+  transition: .3s;
+}
+
+footer small {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+}
